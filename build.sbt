@@ -1,5 +1,5 @@
 name := "untitled"
-
 version := "0.1"
-
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.0"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.0" % "test"
 scalaVersion := "2.12.7"
