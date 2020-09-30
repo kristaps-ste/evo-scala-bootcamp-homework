@@ -1,4 +1,4 @@
-object Main extends App {
+object Homework1 extends App {
 
   def gcd(a: Int, b: Int): Int = {
     (a, b) match {

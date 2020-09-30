@@ -1,4 +1,4 @@
-import Main._
+import Homework1._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers._
 
