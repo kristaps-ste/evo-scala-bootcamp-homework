@@ -1,3 +1,3 @@
-# Evo-BootCamp-Homeworks
+# evo-scala-bootcamp-homework
+Homework 1 : https://github.com/kristaps-ste/evo-scala-bootcamp-homework/tree/Homework1
 
-Homework 1 : https://github.com/kristaps-ste/Evo-BootCamp-Homeworks/tree/Homework1
