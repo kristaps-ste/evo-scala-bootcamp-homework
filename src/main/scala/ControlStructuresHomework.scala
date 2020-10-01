@@ -43,11 +43,10 @@ object ControlStructuresHomework {
 
   final case class Result(value: Double, operation: String, operands: List[Double]) {
 
-    import java.text.DecimalFormat
-    val df = new DecimalFormat("0.#####")
-    def operandsStr: String = operands.map(df.format(_)).mkString(" ")
-    def operandsStr(n: Int): String = df.format(operands(n))
-    def valueStr: String = df.format(value)
+    def operandsStr: String = operands.map(format(_)).mkString(" ")
+    def operandsStr(n: Int): String = format(operands(n))
+    def valueStr: String = format(value)
+    private def format(n: Double): String = "%.5f".format(n).replaceAll("[.0]+$", "")
   }
 
   def parseCommand(x: String): Either[ErrorMessage, Command] = {
@@ -137,7 +136,7 @@ object ControlStructuresHomework {
 
   private def error(
       methodName: String,
-      text: String = ""
+      text: String
   ): Left[ErrorMessage, Nothing] =
     Left(ErrorMessage(s"Error: $text in $methodName"))
 }
