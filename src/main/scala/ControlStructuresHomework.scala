@@ -61,7 +61,7 @@ object ControlStructuresHomework {
     val command: Option[String] = splitted.headOption.map(_.toLowerCase)
 
     val operands: List[Double] = Try(
-      splitted.drop(1).map(_.toDouble).toList
+      splitted.tail.map(_.toDouble).toList
     ) match {
       case Success(value) => value
       case Failure(error) => List()
@@ -70,13 +70,13 @@ object ControlStructuresHomework {
     import Command._
     (command, operands) match {
       case (None, _) =>
-        generateLeftError("parseCommand", "None")
+        error("parseCommand", "None")
 
       case (Some(_), a) if a.isEmpty =>
-        generateLeftError("parseCommand", "Failure in parsing numbers")
+        error("parseCommand", "Failure in parsing numbers")
 
       case (Some("divide"), a) if a.size != 2 =>
-        generateLeftError(
+        error(
           "parseCommand",
           "Two operands exactly   must be provided for division"
         )
@@ -86,7 +86,7 @@ object ControlStructuresHomework {
       case (Some("min"), a)     => Right(Min(a))
       case (Some("max"), a)     => Right(Max(a))
       case (Some(a), _) =>
-        generateLeftError("parseCommand", s"command parsed as $a")
+        error("parseCommand", s"command parsed as $a")
     }
   }
 
@@ -95,17 +95,17 @@ object ControlStructuresHomework {
   def calculate(x: Command): Either[ErrorMessage, Result] = {
     x match {
       case Divide(_, b) if b == 0 =>
-        generateLeftError("calculate", "division by zero")
+        error("calculate", "division by zero")
       case Divide(a, b) => Right(Result(a / b, "div", List(a, b)))
       case Sum(numbers) => Right(Result(numbers.sum, "sum", numbers))
       case Average(numbers) if numbers.size == 0 =>
-        generateLeftError("calculate", "0 operands ")
+        error("calculate", "0 operands ")
       case Average(numbers) =>
         Right(Result(numbers.sum / numbers.size, "avg", numbers))
       case Min(numbers) => Right(Result(numbers.min, "min", numbers))
       case Max(numbers) => Right(Result(numbers.max, "max", numbers))
       case _ =>
-        generateLeftError("calculate", s" $x not implemented")
+        error("calculate", s" $x not implemented")
     }
 
   }
@@ -125,17 +125,17 @@ object ControlStructuresHomework {
   def process(x: String): String = {
     import cats.implicits._
     val result = for {
-      parsed <- parseCommand(x).leftMap(_.value)
-      calculated <- calculate(parsed).leftMap(_.value)
+      parsed <- parseCommand(x)
+      calculated <- calculate(parsed)
     } yield renderResult(calculated)
-    result.merge
+    result.leftMap(_.value).merge
   }
 
   // This `main` method reads lines from stdin, passes each to `process` and outputs the return value to stdout
   def main(args: Array[String]): Unit =
     Source.stdin.getLines() map process foreach println
 
-  private def generateLeftError(
+  private def error(
       methodName: String,
       text: String = ""
   ): Left[ErrorMessage, Nothing] =
