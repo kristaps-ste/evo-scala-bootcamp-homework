@@ -1,5 +1,4 @@
 package com.evolutiongaming.bootcamp.basics
-import scala.util.Try
 
 object DataStructures {
 
