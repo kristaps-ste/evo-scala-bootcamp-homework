@@ -64,7 +64,7 @@ object ImplicitsHomework {
 
       def get(key: K): Option[V] = map.get(key)
       def put(key: K, value: V): Unit = {
-        val inputSizeScore: SizeScore = key.sizeScore + value.sizeScore
+      private val inputSizeScore: SizeScore = key.sizeScore + value.sizeScore
 
         if (inputSizeScore <= maxSizeScore) {
 
