@@ -1,3 +1,3 @@
-# evo-scala-bootcamp-homework
+# evo-scala-bootcamp-homeworks
 
 
