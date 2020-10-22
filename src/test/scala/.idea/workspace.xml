@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a92310e-c68e-44c6-8ebf-8a7e5de91113" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../main/scala/ErrorHandlingHomeWork.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.scalafmt.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.scalafmt.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main/scala/ControlStructuresHomework.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main/scala/Homework1.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main/scala/Homework2.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlStructuresHomeworkTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GcdTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ErrorHandlingTests.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2Test.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LcmTest.scala" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1j6JywhVmeLEu0ZWsL7brBN2vGM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a92310e-c68e-44c6-8ebf-8a7e5de91113" name="Default Changelist" comment="" />
+      <created>1603118865558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603118865558</updated>
+      <workItem from="1603118866706" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
